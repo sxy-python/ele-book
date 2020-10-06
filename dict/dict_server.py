@@ -4,11 +4,13 @@ dict 服务端
 功能:业务逻辑处理
 模型：多进程　tcp 并发
 """
-from socket import *
-from multiprocessing import *
-import signal #处理僵尸进程
+import signal  # 处理僵尸进程
 import sys
-from mysql import Database
+from multiprocessing import *
+from socket import *
+
+from dict.mysql import Database
+
 
 #服务端注册处理
 def do_register(c,data):
@@ -66,7 +68,7 @@ def request(c):#循环接受链接请求
 
 #全局变量
 HOST = '0.0.0.0'
-PORT = 8888
+PORT = 8880
 ADDR = (HOST,PORT)
 #建立数据库对象,全局＝父进程＝所有子进程共享
 db = Database(database = 'dict')

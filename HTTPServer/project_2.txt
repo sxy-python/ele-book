@@ -1,0 +1,83 @@
+cookie
+
+  import json
+
+  json.dumps(dict or list) 将字典或者列表转换为json
+  json.loads(json_data) 将json数据转换为python格式
+
+  In [1]: import json
+
+In [2]: d = {'a':1,'b':"hi"}
+
+In [3]: data = json.dumps(d)
+
+In [4]: data
+Out[4]: '{"a": 1, "b": "hi"}'
+
+In [5]: json.loads(data)
+Out[5]: {'a': 1, 'b': 'hi'}
+
+In [6]: l = [1,2,3]
+
+In [7]: data = json.dumps(l)
+
+In [8]: json.loads(data)
+Out[8]: [1, 2, 3]
+
+In [9]: data
+Out[9]: '[1, 2, 3]'
+
+
+第二阶段内容盘点
+
+1. 数据结构
+
+   逻辑模型--> 存储模型 --> 数据结构实现
+
+   线性表顺序实现  列表
+   线性表链式实现  链表
+   顺序栈和链式栈
+   顺序队列和链式队列
+   二叉树
+
+   算法 : 排序和查找
+
+   https://leetcode-cn.com/
+
+2. IO网络  (重点)
+
+   文件处理
+   网络套接字
+
+3. 进程线程 (重点)
+
+   进程 : fork  Process
+
+   线程 : Thread
+
+4. IO模型
+
+   多路复用 : select poll  epoll
+
+   协程
+
+5. 正则
+
+6. mysql (基础)
+
+7. git
+
+8. 聊天室  文件服务器  httpserver 2,3
+   在线词典
+
+作业: 复习计划  3 周
+
+
+
+
+
+
+
+
+
+
